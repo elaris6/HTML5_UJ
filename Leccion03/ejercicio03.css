@@ -1,0 +1,36 @@
+/*
+Se definen las prioridades de los estilos, que tendrán menor prioridad que los
+definidos directamente en el HTML.
+1. Estilos en elementos HTML.
+2. Estilos en "head" del HTML.
+3. Estilos en fichero CSS externo
+*/
+
+body {
+    background: #256F5B;
+    font-family:"Arial Narrow";
+    color:white;
+}
+
+h1 {
+    font-size: xx-large;
+    font-style: italic;
+}
+
+p {
+    font-weight: bolder;
+    background: #468B78;
+}
+
+/* Agregamos algunas clases personalizadas */
+
+.resaltado {
+    background: #9E354A;
+    font-weight: bold;
+}
+
+.nuevaClase {
+    font-family: "Century Gothic";
+    font-weight: bold;
+    background: #4F0010;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ejemplo estilos CSS prioridades</title>
+
+    <!-- CSS externo. Si se quiere definir los estilos CSS en un fichero CSS externo,
+    es necesario incluir la etiqueta "link" especificada a continuación, indicando la
+    el tipo "text/css" y la ubicación relativa del fichero de estilos.
+    Los estilos definidos en un fichero CSS externo tendrán prioridad 3. -->
+    <link rel="stylesheet" type="text/css" href="ejercicio02.css">
+    <!-- Los estilos definidos en el bloque "head" tendrán prioridad 2. -->
+    <style>
+        <!--
+        body {
+            font-family:"Bodoni MT Black";
+            color:#ff0000;
+        }
+        -->
+    </style>
+</head>
+
+
+<body>
+    <!-- Los estilos definidos directamente sobre las etiquetas HTML tendrán prioridad 1. -->
+    <h1>Ejemplo 02 CSS prioridades</h1>
+
+    <p style="font-family:Agency FB;">
+        Este es el contenido del párrafo 1
+    </p>
+    <br>
+    <p>
+        Este es el contenido del párrafo 2
+    </p>
+    <br>
+    <p>
+        Este es el contenido del párrafo 3
+    </p>
+
+</body>
+
+</html>

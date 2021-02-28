@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hipervinculos en HTML</title>
+</head>
+
+<body>
+
+    <a href="01_algunos_componentes.html">Link a Algunos componentes</a>
+
+    <h1>Hipervínculos</h1>
+
+    <p>
+        <!-- En "href" se pueden indicar rutas locales relativas tomando como referencia
+        la del propio fichero, o rutas remotas haciendo uso de una url.
+        "title" texto ayuda al hacer foco en el link.
+        "target" indica al navegador donde deberá abrir el enlace. -->
+        <a href="http://www.globalmentoring.com.mx"
+            title="Sitio web de Global Mentoring" target="_blank">Link a Global Mentoring</a>
+    </p>
+
+    <!-- Ejemplo de rutas locales tomando como referencia la del propio fichero -->
+    <p>
+        Enlace a
+        <a href="links/link1.html">Link 1</a>
+        <!-- Para volver desde allí necesitaremos:
+                <a href="../08_hipervinculos.html">Vuelta a Hipervínculos</a> -->
+    </p>
+    <p>
+        Enlace a
+        <a href="links/subcarpeta1/link2.html">Link 2</a>
+        <!-- Para volver desde allí necesitaremos:
+                <a href="../../08_hipervinculos.html">Vuelta a Hipervínculos</a> -->
+    </p>
+    <p>
+        Enlace a
+        <a href="links/subcarpeta1/subcarpeta2/link3.html">Link 3</a>
+        <!-- Para volver desde allí necesitaremos:
+                <a href="../../../08_hipervinculos.html">Vuelta a Hipervínculos</a> -->
+    </p>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+/* Se pueden descargar las imágenes y poner la ruta local en lugar de la url. */
+
+body {
+    background: #ffffff;
+}
+
+img {
+    border: 0;
+}
+
+/*
+MARGIN. Espacio entre el borde externo del contenedor de un objeto y el resto de elementos.
+PADDING. Espacio interno entre el propio elemento y el borde interior de su contenedor.
+
+Los espacios se defien en el siguiente orden: up right down left.
+Si solo se indica un valor, aplica a los 4 lados.
+Si se indican dos valores, el primero aplica a up y down y el segundo a right y left.
+*/
+
+h1 {
+    padding:5px 5px 0px 5px;
+    margin:0 0 15px 0;
+    color:#2B7C92;
+    font-size:2em;
+}
+
+/*
+Para crear los tabuladores se aplica una técnica por medios de contenedores "div", agregando
+de manera anidada imágenes hasta formar la composición deseada.
+*/
+
+div.tab {
+    background-image: url(http://icursos.net/cursos/HTML/Leccion03/IntroduccionCSS/LaboratorioCSS1/img/izqTab.gif);
+    display: block;
+    float: left;
+    /* Las imágenes tienen 21px de alto. */
+    height: 21px;
+    padding:0;
+    /* Separación entre pestañas */
+    margin:0 1px 0 0;
+    /* Por defecto una imagen se repite en todo el espacio que tenga para mostrarse,
+    salvo que se especifique lo contrario usando esta propiedad "backgroung-repeat". */
+    background-repeat: no-repeat;
+}
+
+div.tab div {
+    background-image: url(http://icursos.net/cursos/HTML/Leccion03/IntroduccionCSS/LaboratorioCSS1/img/derTab.gif);
+    background-repeat: no-repeat;
+    background-position: top right;
+    float: left;
+    /* Las imágenes tienen 21px de alto. */
+    height: 21px;
+    margin:0;
+}
+
+div.tab div a {
+    background-image: url(http://icursos.net/cursos/HTML/Leccion03/IntroduccionCSS/LaboratorioCSS1/img/centroTab.gif);
+    /* Las imágenes de los lados tienen 8px de ancho, por lo que dejamos este espacio de margen. */
+    margin:0 8px;
+    /* Las imágenes tienen 21px de alto. */
+    height: 21px;
+    line-height: 21px;
+    display:block;
+    text-decoration: none;
+    vertical-align:middle;
+    float: left;
+    /* Por defecto una imagen se repite en todo el espacio que tenga para mostrarse,
+    salvo que se especifique lo contrario usando esta propiedad "backgroung-repeat".
+    En este caso lo aplicamos de forma explícita. */
+    background-repeat: repeat;
+}
+
+/* Aunque se puede aplicar un identificador a varios elementos de una página HTML,
+las buenas prácticas son usar clases para varios elementos e identificadores para 
+cuadno es uno solo. */
+#actual {
+    background-image: url(http://icursos.net/cursos/HTML/Leccion03/IntroduccionCSS/LaboratorioCSS1/img/actIzqTab.gif);
+}
+
+#actual div {
+    background-image: url(http://icursos.net/cursos/HTML/Leccion03/IntroduccionCSS/LaboratorioCSS1/img/actDerTab.gif);
+}
+
+#actual div a {
+    background-image: url(http://icursos.net/cursos/HTML/Leccion03/IntroduccionCSS/LaboratorioCSS1/img/actCentroTab.gif);
+}
+
+a:link,a:visited {
+    color: #226275;
+    text-decoration:underline;
+}
+
+a:active,a:hover {
+    color:#39A5C4;
+}

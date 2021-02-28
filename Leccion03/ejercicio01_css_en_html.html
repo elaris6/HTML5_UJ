@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ejemplo estilos en HTML</title>
+    </head>
+    <!-- Se puede especificar estilos para cualquier elemento directamente sobre
+    el html con el atributo "style" y especificando las propiedades deseadas, separadas
+    por ";". -->
+    <body style="background:#ffffcc; color:#551100;font-family:Comic Sans MS;">
+
+        <h1>Ejemplo CSS directamente en HTML</h1>
+
+        <!-- Los estilos aplicados directamente sobre los elementos html se heredan
+        salvo que se especifique algo distinto en alguno de los elementos hijos.
+        En este ejemplo, para un párrajo se modifica la fuente definida como estilo
+        a nivel de "body", y dentro del texto del propio párrafo se crea una 
+        sección específica mediante la etiqueta "span", sobre la que se aplica
+        incluso un estilo específico sobreescribiendo el del párrafo y body. -->
+
+        <p style="font-family:Arial Black;">
+            Este es el contenido del <span style="color:#001188;font-size:xx-large">párrafo</span> 1
+        </p>
+        <br>
+        <p style="color:#ff0000;">
+            Este es el contenido del párrafo 2
+        </p>
+        <br>
+        <p style="color:#f8d077;">
+            Este es el contenido del párrafo 3
+        </p>
+        
+    </body>
+
+</html>

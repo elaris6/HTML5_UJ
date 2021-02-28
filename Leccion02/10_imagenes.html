@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Imágenes HTML</title>
+</head>
+
+<body>
+
+    <a href="01_algunos_componentes.html">Link a Algunos componentes</a>
+
+    <h1>Imágenes en HTML</h1>
+
+    <br><br>
+
+    <p>
+        <!-- Podemos referenciar imágenes con rutas remotas mediante urls o mediante
+        rutas locales.
+        Algunos atributos que se pueden usar:
+        "alt", para mostrar un texto alternativo si no se puede cargar la imagen.
+        "title", para resaltar un texto si se hace foco en la imagen.
+        "width", "heigth", para forzar un alto y un ancho en píxeles.
+        "align", para forzar la alineación de la imagen.
+        "hspace", para dejar un espacio en píxeles desde su alineamiento  -->
+        Este párrafo
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+        alt="google logo" width="110" height="40" title="Google logo"/>
+        es una imagen.
+    </p>
+
+    <br><br>
+
+    <p>
+        Otra imagen
+        <img src="link.jpg" title="Link the adventurer" width="50" height="70" 
+        align="left" hspace="20"/>
+        en local.
+    </p>
+
+    <br><br>
+
+    <!-- Se puede definir una imagen como link, metiéndola dentro de un tag "a".
+    en lugar de poner texto en el enlace. -->
+    <p>
+        <a href="http://www.globalmentoring.com.mx" target="_blank">
+            <img src="http://icursos.net/cursos/HTML/Leccion02/10-ImagenesHTML/boton.png"
+            alt="Botón enviar" width="120" height="70" align="left"
+            hspace="10" border="0" title="Botón enviar">
+        </a>
+        Imagen que es un link que lleva a un recurso remoto
+    </p>
+
+</body>
+
+</html>
