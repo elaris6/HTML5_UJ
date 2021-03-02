@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Manejo de FRAMES</title>
+</head>
+<!-- Los frames pueden anidarse. -->
+<!-- Frame externo. Creamos un grupo de frames externo mediante la etiqueta "framset".
+    Lo creamos de dos columnas mediate ekl atributo "cols", asígnando un 25% del espacio
+    a la primera columena y el resto para la segunda "25%,*".  -->
+<frameset cols="25%,*" frameborder="0" framespacing="0" border="0">
+
+    <!-- Frame interno izquierda -->
+    <frame src="navegacion.html" name="navegacion">
+        <!-- Frameset interno derecha -->
+        <!-- Este frameset lo definiremos con dos filas mediante el atributo "rows", asignando un 30%
+    a la fila superior y el resto a la inferior de forma similar al reparto de espacio en
+    las columnas del fram externo. -->
+        <frameset rows="30%,*">
+            <!-- Frame derecha, fila superior. Se indica que no aparezcan las barras de scroll -->
+            <frame src="titulo.html" name="titulo" scrolling="no">
+                <!-- Frame derecha, fila inferior. -->
+                <frame src="contenido.html" name="contenido">
+        </frameset>
+        <noframes>
+            Esta es una página que no puede mostrar frames.
+        </noframes>
+
+</frameset>
+
+</html>

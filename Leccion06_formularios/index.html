@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formulario HTML</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+    <!-- Se declara un formulario con la etiqueta "form".
+    El atributo "name" es importante para identificar el formulario de cara al uso de scripts.
+    El atributo "action" especifica el recurso del servidor hacia el que se va a enviar la información del formulario.
+    EL atributo "method" especifica el tip ode envío hacia el servidor (POST, GET, PUT...). -->
+    <form name="form1" action="/recursoEnServidor" method="POST">
+        <!-- Los "input" de tipo "hidden" no se van a mostrar, pero se van a enviar al servidor.  -->
+        <input type="hidden" name="oculto" value="valorOculto">
+
+        <table width="200" id="one-column-emphasis">
+            <caption>
+                Formulario Registro de datos
+            </caption>
+
+            <tr>
+                <td class="oce-first">
+                    Usuario
+                </td>
+                <td>
+                    <input class="default" type="text" name="usuario" placeholder="Escribe usuario">
+                </td>
+            </tr>
+            <tr>
+                <td class="oce-first">
+                    Password
+                </td>
+                <td>
+                    <input class="default" type="password" name="password" placeholder="Escribe contraseña">
+                </td>
+            </tr>
+            <tr>
+                <td class="oce-first">
+                    Tecnologías de interés
+                </td>
+                <td>
+                    <!-- A la hora de crear un "input" de tipo "checkbox", lo importante es definir para todas las opciones
+                    el mismo valor del atributo "name", para que sean identificadas como un conjunto, y se envíen en un
+                    array conjunto. Si solo se selecciona un elemento, se enviará un valor simple. -->
+                    Java <input type="checkbox" name="tecnologia" value="java"> &nbsp;&nbsp;&nbsp; Javascript <input type="checkbox" name="tecnologia" value="javascript"> &nbsp;&nbsp;&nbsp; Python <input type="checkbox" name="tecnologia" value="python">
+                </td>
+            </tr>
+            <tr>
+                <td class="oce-first">
+                    Género
+                </td>
+                <td>
+                    <!-- A la hora de crear un "input" de tipo "radio", lo importante es definir para todas las opciones
+                    el mismo valor del atributo "name", para que sean identificadas como un conjunto. De esta forma sólo se
+                    permitirá seleccionar una de ellas y se enviará ese valor al servidor. -->
+                    Mujer <input type="radio" name="genero" value="M"> &nbsp;&nbsp;&nbsp; Hombre <input type="radio" name="genero" value="H">
+                </td>
+            </tr>
+            <tr>
+                <td class="oce-first">
+                    Ocupación
+                </td>
+                <td>
+                    <!-- A la hora de crear un "input" de tipo "select" (lista desplegable), se debe definir un grupo "select"
+                    y después añadir los elementos de tipo "option" necesarios, cada uno con su valor. No se permite multiselección
+                    por defecto.
+                    Lo que se enviará al servidor es el valor de "value". -->
+                    <select class="default" name="ocupacion">
+                        <option value="1">Estudiante</option>
+                        <option value="2">Trabajador</option>
+                        <option value="3">Freelance</option>
+                        <option value="4" selected>Otro</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="oce-first">
+                    IDE/Editor favorito
+                </td>
+                <td>
+                    <!-- A la hora de crear un "input" de tipo "select" (lista desplegable), se debe definir un grupo "select"
+                    y después añadir los elementos de tipo "option" necesarios, cada uno con su valor. Se permite multiselección
+                    si se especifica con el atributo "multiple".
+                    Lo que se enviará al servidor es el valor de "value". -->
+                    <select class="default" name="musica" multiple>
+                        <option value="vsc">Visual Studio Code</option>
+                        <option value="atom">Atom</option>
+                        <option value="sublime">Sublime Text</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="oce-first">
+                    Comentarios
+                </td>
+                <td>
+                    <!-- A la hora de crear un "input" de tipo "select" (lista desplegable), se debe definir un grupo "select"
+                    y después añadir los elementos de tipo "option" necesarios, cada uno con su valor. No se permite multiselección.
+                    Lo que se enviará al servidor es el valor de "value". -->
+                    <textarea class="default" name="comentarios" cols="30" rows="2" placeholder="Escribe tus comentarios"></textarea>
+                </td>
+            </tr>
+
+            <tr style="text-align: center;">
+                <td>
+                    <!-- El input de tipo "reset" automáticamente restablecerá el formulario al que pertenezca. -->
+                    <input type="reset" class="default" value="Limpiar">
+                </td>
+                <td>
+                    <!-- El input de tipo "submit" realizará el envío al servidor, recogiendo todos los valores informados
+                        en el formulario. -->
+                    <input type="submit" class="default" value="Enviar">
+                </td>
+            </tr>
+
+
+        </table>
+
+
+    </form>
+
+    <script src="" async defer></script>
+</body>
+
+</html>
