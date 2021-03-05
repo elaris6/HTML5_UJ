@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejemplo botones rollover</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <script src="" async defer></script>
+</head>
+
+<body>
+
+    <h1>Ejemplo de botones Rollover</h1>
+    <p>Un botón rollover es el que se construye sobre una imagen que cambia al ser pulsado o posicionado sobre él.</p>
+
+    <!-- EJEMPLO A. Se crean un enlace sobre una imagen y se añaden los atributos "onmouseover" y "onmouseout"
+        para que mediante html se modifique la imagen. -->
+    <a href="resultado.html" onmouseover="document.boton.src = 'boton_on.jpg'" onmouseout="document.boton.src = 'boton_off.jpg'">
+        <img src="boton_off.jpg" name="boton" alt="boton">
+    </a>
+
+    <br>
+
+    <!-- EJEMPLO B. En lugar de hacerlo directamente con HTML, es más recomendable realizar la tarea de
+        rollover mediante JS. -->
+    <a href="mejorado.html">Ejemplo mejorado</a>
+
+
+</body>
+
+</html>

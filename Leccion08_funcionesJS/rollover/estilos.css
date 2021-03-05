@@ -1,0 +1,10 @@
+body {
+    background: #ffffff;
+}
+
+
+/** Para que las imágenes se visualicen sin borde */
+
+img {
+    border: none;
+}
