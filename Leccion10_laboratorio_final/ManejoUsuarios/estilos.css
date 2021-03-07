@@ -1,0 +1,20 @@
+body {
+    background: #1a1a65;
+    font-family: Arial;
+    color: #ffffff;
+}
+h1 {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+.bloque {
+    margin-left: 50px;
+}
+
+.info {
+    color: #cccc00;
+}

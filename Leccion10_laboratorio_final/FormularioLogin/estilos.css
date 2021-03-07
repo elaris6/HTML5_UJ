@@ -1,0 +1,20 @@
+body {
+    background: black;
+    font-family: Arial;
+    color: #ff9900;
+}
+
+h1 {
+    color: #ff5a09;
+}
+
+.boton {
+    background: #f95700;
+    padding: 4px 10px;
+    color: #fff;
+    border:#c30 1px solid;
+}
+
+.entrada {
+    width: 200px;
+}
