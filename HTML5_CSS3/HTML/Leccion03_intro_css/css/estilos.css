@@ -1,0 +1,24 @@
+/* CSS - Cascading Style Sheet */
+
+/* Las hojas de estilos en cascada se denominan así porque un estilos
+aplicado a un elemento se hereda hacia todos sus hijos en el DOM, salvo
+que un elemento hijo tenga un estilo propio especificado. */
+
+/* El orden de prevalencia de estilos de mayor prevalencia a menor es::after
+1 - Inline styles. Aplicado a un tag en el código html
+2 - Embebed styles. Aplicado con la etiqueta "style" en el "haead" del html
+(debe estar después de la etiqueta "link" en el "head" para que sobreescriba)
+3 - External styles. Aplicado mediante archivo CSS externo
+4 - Browser default styles. Valores por defecto del navegador
+*/ 
+
+h1 {
+    color:blue;
+}
+
+p {
+    color:white;
+    background-color:crimson;
+    /* Uso de una fuente importada con origen externo. */ 
+    font-family: 'Trocchi', serif;
+}

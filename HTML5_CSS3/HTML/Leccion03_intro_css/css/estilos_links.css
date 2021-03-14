@@ -1,0 +1,31 @@
+h1 {
+    color: #f07167;
+}
+
+/* ESTILOS EN LINKS */
+
+/* Link no visitado */
+a:link{
+    color: #fb8500;
+    /* Quitar subrayado por defecto */
+    text-decoration: none;
+}
+
+/* Link visitado */
+a:visited{
+    color: #219ebc;
+    text-decoration: none;
+}
+
+/* Al pasar por encima del link */
+a:hover{
+    color: #8ecae6;
+    /* Poner subrayado por defecto */
+    text-decoration: underline;
+}
+
+/* Link siendo pulsado (antes de soltar) */
+a:active{
+    color: #023047;
+    text-decoration: underline;
+}

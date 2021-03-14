@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes en HTML</title>
+</head>
+<body>
+    <h1>Imágenes en HTML</h1>
+    <!-- Carga de imagen en servidor local -->
+    <img src="imagenes/html5.png" alt="logo html5" />
+    <!-- Carga de imagen desde servidor remoto -->
+    <img src="http://globalmentoring.com.mx/imagenes/css3.png" alt="logo css3">
+    <img src="imagenes/javascript.png" alt="logo javascript" />
+    <!-- La propiedad "alt" sirve para indicar un texto a mostrar si no se pueden
+    cargar las imágenes -->
+    <img src="http://globalmentoring.com.mx/imagenes/javascript.jpg" alt="logo javascript">
+    <br/>
+    <!-- Se pueden especificar dimensiones para una imagen. Si solo se especificar
+    una de ellas, se calcula la otra automáticamente para mantener la relación de
+    aspecto. -->
+    <img src="imagenes/html5.png" alt="logo html5" width="50px"/>
+    <img src="imagenes/css3.png" alt="logo css3" height="60px"/>
+    <!-- Si se modifican ambas proporciones se corre el riesgo de deformar la imagen. -->
+    <img src="imagenes/javascript.png" alt="logo javascript" width="140px" height="80px"/>
+
+</body>
+</html>

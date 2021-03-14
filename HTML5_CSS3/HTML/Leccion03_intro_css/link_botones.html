@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links como botones</title>
+    <!-- Enlace a CSS con ruta absoluta desde "context root" -->
+    <link rel="stylesheet" href="/UniversidadJava/HTML_CSS_JS/HTML5_CSS3/HTML/Leccion03_intro_css/css/estilos_link_botones.css">
+</head>
+<body>
+    <h1>Links como botones</h1>
+    <hr/>
+    <br/>
+    <!-- Indicamos un link local como si fuese un link remoto con la URL completa -->    
+    <a href="http://127.0.0.1:5500/UniversidadJava/HTML_CSS_JS/HTML5_CSS3/HTML/Leccion03_intro_css/colores.html">Enlace de prueba</a>
+    <br/>
+    <!-- Lo correcto para páginas del proyecto local es indicar la ruta absoluta
+    del proyecto local (razí del proyecto = "context root"), para evitar malas direcciones.  -->
+    <a href="/UniversidadJava/HTML_CSS_JS/HTML5_CSS3/HTML/Leccion03_intro_css/paginas/contenido.html">Ruta absoluta</a>
+    <br/>
+    <!-- Enlace indicando ruta relativa. No es una buena práctica. -->
+    <a href="paginas/contenido.html">Ruta relativa</a>
+    <br/>
+    <!-- Enlace a URL externa -->
+    <a href="http://www.globalmentoring.com.mx" target="_blank">Global Mentoring</a>
+</body>
+</html>

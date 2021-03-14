@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="css/estilos_tablas.css">
+    <!-- Usar una fuente externa al sistema. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <h1>Tablas en HTML</h1>
+    <hr/>
+    <table>
+        <!-- Título de la tabla. Debe estar inmediatamente tras el tag "table" -->
+        <caption>Listado de personas</caption>
+        <tr>
+            <!-- Ocupar más de una columna se usa la propiedad "colspan". -->
+            <th colspan="2">Nombre</th>
+            <!--<th>Apellido</th>-->
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Mari</td>
+            <td>Cuesta</td>
+            <td>mariwapa@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Alicia</td>
+            <!-- Ocupar más de una fila se usa la propiedad "rowspan". -->
+            <td rowspan="2">Balboa</td>
+            <td>alitadepollo@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Nata</td>
+            <!--<td>Balboa</td>-->
+            <td>natarata@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Rubén</td>
+            <td>Balboa</td>
+            <td>rubeniko@gmail.com</td>
+        </tr>
+    </table>
+</body>
+</html>

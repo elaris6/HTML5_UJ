@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Se puede aplicar estulilos CSS dentro de un bloque "style" en el
+    head del documento html. Estos aplicarán de forma general según se defina. -->
+    <style>
+        h1 {
+            color: #e95e01;
+        }
+        p {
+            font-style: italic;
+        }
+    </style>
+</head>
+<!-- Se puede aplicar estilo a un tag concreto del documento html. -->
+<body style="background:#ffffcc; color:#551100;font-family:Comic Sans MS;">
+    <h1>Estilos directos en documento HTML</h1>
+    <p style="font-size: x-large;font-family: 'Courier New', Monospace;">Estilos directos en etiquetas 1</p>
+    <p style="font-size: x-large;font-family: Monospace,'Courier New';">Estilos directos en etiquetas 2</p>
+</body>
+</html>
+<!-- =================================================================
+El orden de prevalencia de estilos de mayor prevalencia a menor es::after
+1 - Inline styles. Aplicado a un tag en el código html
+2 - Embebed styles. Aplicado con la etiqueta "style" en el "haead" del html
+(debe estar después de la etiqueta "link" en el "head" para que sobreescriba)
+3 - External styles. Aplicado mediante archivo CSS externo
+4 - Browser default styles. Valores por defecto del navegador
+
+================================================================= -->

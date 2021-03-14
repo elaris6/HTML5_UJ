@@ -1,0 +1,61 @@
+/* BOX MODEL */
+
+/* El modelo de caja de HTML se basa en que el contenido o elemento,
+está rodeado desde dentro hacia afuera por "cajas" que son:
+- padding
+- border
+- margin
+Cuando se define un tamaño para un elemento, es para el contenido en si,
+las cajas van sobre este tamaño definido.
+*/
+
+h1 {
+    color:blue;
+}
+
+p {
+    color:white;
+    background-color:crimson;
+    padding: 15px;
+    border: 10px;
+    border-style: solid;
+    border-color: powderblue;
+    /* Al margin no se le aplica color. Es solo para especificar la separación
+    entre elementos */
+    margin: 20px;
+}
+
+/* Los valores para el grosor de padding, border y margin se pueden indicar
+de varias formas:
+- Mediante las propiedades específicas para cada lado (margin-top, border-right...)
+- Mediante la pripiedad "padding", "border", "margin", indicando los valores de
+diferentes formas:
+    - Si solo se indica un valor aplica a todos los lados.
+    - Si se indican dos valores el primero aplica a top y bottom, y el segundo a left y right
+    - Si se indican tres el primero aplica al top, el segundo a left y right, y el tercero a bottom
+
+Con el valor "margin: auto;" se consigue centrar los elementos en su caja padre de manera horizontal.
+*/
+
+#caja1 {
+    border-top: 13px solid green;
+    border-right: 25px solid lightgreen;
+    border-bottom: 17px solid springgreen;
+    border-left: 8px solid greenyellow;
+    margin: 30px 50px;
+}
+
+#caja2 {
+    margin:auto;
+    padding-left: 50px;
+}
+
+#caja3 {
+    padding-top:35px;
+}
+
+#caja4{
+    padding:3px;
+    margin-top:120px;
+    text-align:center;
+}

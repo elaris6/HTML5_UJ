@@ -1,0 +1,20 @@
+h1 {
+    color: #560bad;
+}
+
+/* Estilos para Link no visitado y ya visitado */
+a:link, a:visited{
+    background-color: #b5179e;
+    color: white;
+    padding: 15px 25px;
+    text-align:center;
+    text-decoration: none;
+    /* Para que enlace tenga su propia línena horizontal */
+    display: inline-block;
+    margin: 5px;
+}
+
+/* Estilos para Link siendo pulsado y pasando encima */
+a:hover, a:active{
+    background-color: #f72585;
+}

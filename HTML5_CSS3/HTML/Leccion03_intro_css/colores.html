@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Colores en HTML</title>
+    </head>
+    <body>
+        <h1 style="text-align:center;">Colores en HTML</h1>
+        <p>
+            Generación de paletas de colores de ejemplo ==>
+            <a
+                href="https://coolors.co/"
+                target="_blank">
+                Ir a coolors.co
+            </a>
+        </p>
+
+        <!-- Referencia por nombre. En este caso no es necesario el uso de "#" -->
+        <p style="color: crimson">
+            Colores por nombre
+            <a
+                href="https://htmlcolorcodes.com/es/nombres-de-los-colores/"
+                target="_blank"
+            >
+                Ir a htmlcolorcodes.com
+            </a>
+        </p>
+        <!-- Colores en RGB. -->
+        <p style="color: rgb(220, 20, 60)">
+            Colores en RGB
+            <a
+                href="https://htmlcolorcodes.com/es/nombres-de-los-colores/"
+                target="_blank"
+            >
+                Ir a htmlcolorcodes.com
+            </a>
+        </p>
+        <!-- Colores en RGB. Con RGB podemos además aplicar transparencia (opcional) -->
+        <p
+            style="
+                color: rgb(220, 20, 60);
+                background-color: rgba(220, 20, 60, 0.5);
+            "
+        >
+            Colores en RGB con fondo con RGBA (alpha) que indica la
+            transparencia
+            <a
+                href="https://htmlcolorcodes.com/es/nombres-de-los-colores/"
+                target="_blank"
+            >
+                Ir a htmlcolorcodes.com
+            </a>
+        </p>
+        <!-- Colores en HSL.
+        Hue=Color(0-360) / Saturation=Escala de grises(0% a 100%) / Lightness=Iluminación(0% a 100%)-->
+        <p style="color: hsl(348, 83%, 47%)">
+            Colores en HSL Hue=Color(0-360) / Saturation=Escala de grises(0% a
+            100%) / Lightness=Iluminación(0% a 100%)
+            <a
+                href="https://htmlcolorcodes.com/es/nombres-de-los-colores/"
+                target="_blank"
+            >
+                Ir a htmlcolorcodes.com
+            </a>
+        </p>
+        <!-- Colores en HSL. Con HSL también podemos aplicar la transparencia
+            Hue=Color(0-360) / Saturation=Escala de grises(0% a 100%) / Lightness=Iluminación(0% a 100%)-->
+        <p
+            style="
+                color: hsl(348, 83%, 47%);
+                background-color: hsla(348, 83%, 47%, 0.5);
+            "
+        >
+            Colores en HSLA Hue=Color(0-360) / Saturation=Escala de grises(0% a
+            100%) / Lightness=Iluminación(0% a 100%)
+            <a
+                href="https://htmlcolorcodes.com/es/nombres-de-los-colores/"
+                target="_blank"
+            >
+                Ir a htmlcolorcodes.com
+            </a>
+        </p>
+        <!-- Colores en Hexadecimal.
+        Las posiciones 1 y 2 representan el R,
+        Las posiciones 3 y 4 representan el G,
+        Las posiciones 5 y 6 representan el B,
+    Si solo hay tres posiciones es que los pares son el mismo valor. -->
+        <p style="color: #dc143c">
+            Colores en Hexadecimal
+            <a
+                href="https://htmlcolorcodes.com/es/nombres-de-los-colores/"
+                target="_blank"
+            >
+                Ir a htmlcolorcodes.com
+            </a>
+        </p>
+    </body>
+</html>
