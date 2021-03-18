@@ -1,0 +1,24 @@
+    ol {
+        list-style: none;
+        /* "counter-reset: nombre_contador;" resetea el contador al cargar el elemento. */
+        counter-reset: contador;
+    }
+    
+    ol li {
+        /* "counter-increment: nombre_contador;" incrementa en 1 el contador al cargar el elemento. */
+        counter-increment: contador;
+    }
+    /* El operador "::" es lo que se conoce como un selector. Se puede combinar
+con palabras clave, como en este caso "before", que permitrá añadir un texto
+antes del elemento.  */
+    
+    ol li::before {
+        /* "content: contenido" añade texto a un elemento. Se pueden incluir funciones como en este caso
+        "counter(nombre_contador)", que pinta el contador definido en la lista a nivel del elemento "ol". */
+        content: 'Curso ' counter(contador) ' - ';
+        color: rgb(219, 106, 0);
+    }
+    
+    ol li::after {
+        content: '.';
+    }

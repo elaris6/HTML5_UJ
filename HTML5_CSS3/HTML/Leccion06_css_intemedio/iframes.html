@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrames en HTML</title>
+    <link rel="stylesheet" href="css/iframes.css">
+</head>
+
+<body>
+    <h1 class="titulo">Uso de IFrames en HTML</h1>
+    <!-- El uso de iframes no está recomendado en HTML5, aunque puede ser un recurso para temas muy puntuales. -->
+    <iframe class="marco" src="contenido.html"></iframe>
+    <br/>
+    <iframe class="marco" name="marco_tmp" src=" contenido.html "></iframe>
+    <div class="centrar">
+        <!-- Se peude invocar un link sobre un iframe, con la propiedad "target", haciendo referencia al valor
+        de la propiedad "name" del iframe. -->
+        <a href="http://globalmentoring.com.mx" target="marco_tmp" class="boton">Cargar sitio Global Mentoring</a>
+    </div>
+
+</body>
+
+</html>

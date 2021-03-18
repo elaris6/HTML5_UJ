@@ -1,0 +1,52 @@
+/* Mediante el nombre de elemento "*" hacemos referencia a todos los
+elementos del documento HTML, y podemos aplicar estilos a todos ellos. */
+
+
+/** {
+    margin: 0px;
+    padding: 0px;
+}*/
+
+h2 {
+    color: #3f37c9;
+}
+
+p {
+    color: #457b9d;
+}
+
+
+/* Atributos CLASS CSS. En el fichero css se informan iniciando con
+el caracter punto ".". Deben comenzar por minúscula y en caso de tener 
+nombres compuestos la buena práctica es separarlos por guión medio o 
+guién bajo. */
+
+.titulo {
+    color: #f72585;
+    text-align: center;
+    margin: 15px;
+}
+
+.tarjeta {
+    text-align: center;
+    border: 10px solid purple;
+    background-color: cornsilk;
+    margin: 150px 100px;
+    padding: 25px;
+}
+
+.tarjeta-principal {
+    background-color: #ffacd1;
+}
+
+
+/* Atributo ID CSS. En el fichero css se identifican iniciando con
+el caracter almohadilla "#". Al igual que las clases Deben comenzar
+por minúscula y en caso de tener nombres compuestos la buena práctica
+es separarlos por guión medio o guién bajo. */
+
+#subtitulo {
+    color: #88003d;
+    margin-top: 30px;
+    margin-left: 30px;
+}

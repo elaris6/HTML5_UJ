@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+</head>
+
+<body>
+    <h1>Formularios en HTML5</h1>
+    <hr/>
+
+    <form action="">
+
+        <!-- La pripiedad "for" en una etiqueta "label" la vincula con un input y hace que al
+        hacer click sobre ella se active el input vinculado. -->
+        <label for="nombre">Nombre: </label>
+        <!-- La propiedad "id" identifica el campo de manera única en el documento html.
+        La pripiedad "name" es requerida para identificar los atributos en la url en el envío
+        de tipo GET del formulario (http://url?atributo1=valor1&atributo2=valor2). -->
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required="true" />
+        <br/>
+        <label for=" apellido ">Apellido: </label>
+        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true" />
+
+
+        <br/>
+        <br/>
+        <input type="submit" value="Enviar">
+        <!-- Se puede forzar que no se validen los campos de un formulario mediante la propiedad
+        "formnovalidate" en el botón "submit". También se puede agregar la propiedad "novalidate"
+        en la etiqueta "form", y esto haría que no se validase en ningún caso. -->
+        <input type="submit" value="Enviar sin validar" formnovalidate="formnovalidate">
+
+
+    </form>
+
+</body>
+
+</html>
