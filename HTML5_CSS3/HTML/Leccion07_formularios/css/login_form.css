@@ -1,0 +1,68 @@
+*{
+    font-family: Monospace;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    /* En lugar de un color uniforme, se pueden aplicar degradados con 
+    el valor linear-gradient, con un valor inicial y final. */
+    background: linear-gradient(#7209b7, #3f37c0);
+}
+
+.contenedor {
+    /* Se aplican las siguientes propiedades de margin, padding y width
+    para centrar los elementos. */
+    margin: 50px auto;
+    width: 400px;
+    padding: 30px;
+    /* Se aplica un fondo negro con transparencia */
+    background: rgba(0, 0, 0, .4);
+    /* border-radius aplica redondeo en las esquinas */
+    border-radius: 10px;
+}
+
+.contenedor h2{
+    margin: 0px 0px 30px;
+    padding: 0px;
+    font-size: 30px;
+    text-align: center;
+    color: #4cc9f0;
+
+}
+
+.contenedor .elemento label{
+    color: white;
+}
+
+.contenedor .elemento input{
+    width: 100%;
+    padding: 10px 0px;
+    color: white;
+    /* Es posible definir que un fondo sea transparente con el valor
+    "transparent" en lugar de informar un color. */
+    background: transparent;
+    /* Primero se deshabilita el border y luego se habilita el inferior
+    con las características deseadas. */
+    border: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+}
+
+/* Se puede definir un selector de estilos que aplique a un tipo (type)
+de elemento "input" concreto con la siguiente sintaxis. */
+.contenedor .elemento input[type="submit"]{
+    background-color: #f72585;
+    border: none;
+    /* Propiedad para separar las letras del contenido entre si*/
+    letter-spacing: 5px;
+    /* Se fuerza la conversión a mayúsculas del texto del elemento. */
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 30px;
+}

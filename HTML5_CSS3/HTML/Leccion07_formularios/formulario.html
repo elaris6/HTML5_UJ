@@ -12,29 +12,124 @@
     <h1>Formularios en HTML5</h1>
     <hr/>
 
-    <form action="">
+    <!-- El método de envío por defecto de los formularios es "GET". Este método concatena
+    los parámetros de la petición a la URL con lo que se conoce como "query string".
+    Si no se desea que los parámetros sean visibles en la URL, deberá especificarse el
+    método "POST", para que los parámetros viajen en el body de la petición HTTP, para
+    mayor seguridad. -->
+    <!-- La propiedad "action" deberá contener la url destino del formulario. Si es en el
+    servidor local, se puede usar la ruta relativa. Si es remoto, deberá ser la url completa. -->
+    <!-- Por defecto, la respuesta se muestra en la misma pestaña, pero se puede usar la
+    propiedad "target", al igual que en los links, para modificar este comportamiento.
+    El valor por defecto es "_self".  -->
+    <!-- La pripiedad "autocomplete" con valor "off" permite deshabilitar el autocompletado
+    de los campos del formulario. -->
+    <form action="" method="POST" target="_blank">
 
-        <!-- La pripiedad "for" en una etiqueta "label" la vincula con un input y hace que al
-        hacer click sobre ella se active el input vinculado. -->
-        <label for="nombre">Nombre: </label>
-        <!-- La propiedad "id" identifica el campo de manera única en el documento html.
-        La pripiedad "name" es requerida para identificar los atributos en la url en el envío
-        de tipo GET del formulario (http://url?atributo1=valor1&atributo2=valor2). -->
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required="true" />
-        <br/>
-        <label for=" apellido ">Apellido: </label>
-        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true" />
+        <fieldset>
+            <!-- Se pueden hacer agrupaciones visuales de campos y darle un título a estas
+            agrupaciones mediante las etiquetas "fieldset" y "legend". Esto es meramente
+            visual. -->
+            <legend>Formulario Registro Usuario</legend>
+            <br/>
 
+            <!-- La pripiedad "for" en una etiqueta "label" la vincula con un input y hace que al
+            hacer click sobre ella se active el input vinculado. -->
+            <label for="nombre">Nombre: </label>
+            <!-- La propiedad "id" identifica el campo de manera única en el documento html.
+            La pripiedad "name" es requerida para identificar los atributos en la url en el envío
+            de tipo GET del formulario (http://url?atributo1=valor1&atributo2=valor2). -->
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required="true" />
+            <br/>
+            <label for="apellido">Apellido: </label>
+            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" required="true" />
+            <br/>
+            <label for="edad">Edad: </label>
+            <!-- El tipo "input solo acepta valores enteros salvo que se incluya la propiedad
+            "step="any"".  -->
+            <input type="number" id="edad" name="edad" placeholder="Escribe tu edad" step="any"/>   
+            <br/>
+            <label>ID Usuario: </label>
+            <!-- Añadiendo la propiedad "readonly", se hace que un campo sea solo de visualización
+            para el usuario, pero este campo SI se enviará hacia el servidor. Esto tiene más sentido con 
+            funciones javascript para generar contenido.
+            Es posible añadir en este caso la propiedad "disabled", para que no parezca editable, pero
+            si se hace esto, el parámetro ya NO se enviará al servidor. -->
+            <input type="text" id="id_usuario" name="id_usuario" value="0001" readonly="true" disabled="true"/>
+            <br/>
+            <!-- Los "input" de tipo "hidden" no se van a mostrar, pero se van a enviar al servidor.  -->
+            <input type="hidden" name="oculto" value="valorOculto"> 
+            <br/>
+            <label for=" usuario">Usuario: </label>
+            <input type="text" id="usuario" name="usuario" placeholder="Crea usuario" required="true" />
+            <br/>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" placeholder="Crea contraseña" required="true" />
+            <br/>
+            <label for="email">Email: </label>
+            <!-- Al enviar cadenas con caracteres especiales como la "@", se hace la codificación
+            de estos caracteres acorde al juego de caracteres que estemos usando en el documento
+            HTML (HTML encoding, p.ej. @ -> %40). -->
+            <input type="email" id="email" name="email" placeholder="Introduce tu email" required="true" />
+            <br/>
+            <!-- Cada elemento de tipo "radio" debe agruparse con el resto de sus opciones mediante la
+            propiedad "name". El valor que se enviará al servidor será el de la propiedad "value". -->
+            <label>Genero:</label><br/>
+            <input type="radio" id="femenino" name="genero" value="feminino">
+            <label for="femenino">Femenino</label><br/>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label><br/>
 
-        <br/>
-        <br/>
-        <input type="submit" value="Enviar">
-        <!-- Se puede forzar que no se validen los campos de un formulario mediante la propiedad
-        "formnovalidate" en el botón "submit". También se puede agregar la propiedad "novalidate"
-        en la etiqueta "form", y esto haría que no se validase en ningún caso. -->
-        <input type="submit" value="Enviar sin validar" formnovalidate="formnovalidate">
+            <fieldset>
+                <legend>Campos coding</legend>
+                <br/>
+                <!-- En los grupos de elementos de tipo "checkbox" se permite seleccionar varias opciones,
+                pero al igual que en los "radio", se debe informar el mismo valor en la propiedad "name".
+                Al enviarse se enviarán varias veces en el mensaje HTTP y se recibirán como un array del
+                lado del servidor. -->
+                <label>Tecnologías de interés:</label><br/>
+                <input type="checkbox" id="java" name="tecnologias" value="java">
+                <label for="java">Java</label><br/>
+                <input type="checkbox" id="javascript" name="tecnologias" value="javascript">
+                <label for="javascript">JavaScript</label><br/>
+                <input type="checkbox" id="python" name="tecnologias" value="python">
+                <label for="python">Python</label><br/>
+                <input type="checkbox" id="go" name="tecnologias" value="go">
+                <label for="go">Golang</label><br/>
+                <!-- Los cuadros de selección tienen su propia etiqueta "select", no son un type de 
+                input. Dentro del tag "select" se deben incluir los tags "option" con las opciones
+                deseadas. Si se desea permitir multi-selección, se debe informar la propiedad
+                "multiple" en el elemento "select". Si se desea que haya una opción marcada por
+                defecto, se debe informar la propiedad "selected" en dicho elemento "option". 
+                Al enviar el formulario funcionará igual que los "checkbox" con varios valores.-->
+                <label for="ide">IDE/editor favorito:</label><br/>
+                <select name="ide" id="ide" multiple="true">
+                    <option value="vim">Vim</option>
+                    <option value="vsc">Visual Studio Code</option>
+                    <option value="sublime">Sublime</option>
+                    <option value="atom" selected="true">Atom</option>
+                </select>
+                <br/>
+            </fieldset>
+            <!-- Los campos de texto grande se manejan con elementos de tipo "textarea". -->
+            <label for="comentarios">Comentario:</label><br/>
+            <textarea name="comentario" id="comentario" cols="40" rows="5" placeholder="Introduce tu comentario"></textarea>
 
+            <br/>
+            <br/>
+            <br/>
+            <hr/>
+            <br/>
+            <input type="submit" value="Enviar">
+            <!-- Se puede forzar que no se validen los campos de un formulario mediante la propiedad
+            "formnovalidate" en el botón "submit". También se puede agregar la propiedad "novalidate"
+            en la etiqueta "form", y esto haría que no se validase en ningún caso. -->
+            <input type="submit" value="Enviar sin validar" formnovalidate="formnovalidate">
+            <!-- El elemento "input" de tipo "reset" permite incluir un botón que resetea todos los
+            elementos del formulario al valor inicial. -->
+            <input type="reset" value="Reiniciar formulario">
 
+        </fieldset>
     </form>
 
 </body>
