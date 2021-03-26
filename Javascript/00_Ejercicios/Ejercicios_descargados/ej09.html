@@ -1,0 +1,25 @@
+<!-- Insertar contenido con "innerHTML" -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej09</title>
+</head>
+
+<body>
+    <p>Con innerHTML se puede introducir contenido HTML desde un script.</p>
+    <div id="salida"></div>
+    <script>
+        let dato, num;
+        dato = window.prompt("Introduce un número a doblar.", "0");
+        num = parseInt(dato);
+        num *= 2;
+        document.getElementById("salida").innerHTML = (`<p>El doble de ${dato} es: ${num}</p> `)
+    </script>
+</body>
+
+</html>

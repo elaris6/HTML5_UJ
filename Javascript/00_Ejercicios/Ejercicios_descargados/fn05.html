@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fn05</title>
+    <script>
+        let contador = 0;
+        /** Definición canónica */
+        function suma(n1, n2) {
+            return n1 + n2 + contador++;
+        }
+        /** Función como expresión. Requerido punto y coma. */
+        let resta = function(n1, n2) {
+            return n1 - n2 - contador--;
+        };
+        /** Función flecha. Requerido punto y coma. */
+        let multi = (n1, n2) => {
+            return n1 * n2 * contador++;
+        };
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Suma" onclick="document.getElementById('suma').innerHTML = 'Resultado: ' + (suma(2,3))">
+    <span id="suma"></span>
+    <br/>
+    <input type="button" value="Resta" onclick="document.getElementById('resta').innerHTML = 'Resultado: ' + (resta(2,3))">
+    <span id="resta"></span>
+    <br/>
+    <input type="button" value="Multi" onclick="document.getElementById('multi').innerHTML = 'Resultado: ' + (multi(2,3))">
+    <span id="multi"></span>
+
+</body>
+
+</html>

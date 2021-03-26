@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej14</title>
+</head>
+
+<body>
+    <div id="contenido"></div>
+    <script>
+        let num = 0;
+        let contador = 0;
+        while (num != 7) {
+            num = parseInt(prompt("Introduce un número, por favor", "0"));
+            contador++;
+            if (num == 7) {
+                alert("Has introducido el número 7!!!");
+                break;
+            } else {
+                let contenido = document.getElementById("contenido").innerHTML;
+                if (isNaN(num)) {
+                    document.getElementById("contenido").innerHTML = contenido + `<p>Valor introducido incorrecto!</p>`;
+                } else {
+                    document.getElementById("contenido").innerHTML = contenido + `<p>Nuevo número introducido: ${num}</p>`;
+                }
+            }
+        }
+        console.log("Fin del programa. Contador:" + contador);
+    </script>
+
+</body>
+
+</html>
