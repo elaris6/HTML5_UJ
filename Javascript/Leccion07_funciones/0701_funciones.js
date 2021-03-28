@@ -6,6 +6,7 @@
 
 /** Las funciones se pueden declarar antes o incluso después
  * de ser llamadas. A esta propiedad se la conoce como "Hoisting".
+ * El "hoisting" también aplica a variables de tipo "var".
  */
 
 // Invocación o llamada a la función
