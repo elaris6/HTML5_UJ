@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión eventos con addEventListener</title>
+</head>
+<body>
+    <!-- Eventos "onfocus" (elemento gana el foco) y "onblur" (elemento pierde el foco).
+    En este caso los eventos se generarán desde Javascript. -->
+    <h1 id="titulo">Gestión eventos con addEventListener</h1>
+    <p>El fondo de los input se modifica al ganar o perder el foco.</p>
+    <br>
+    <form action="" id="formulario">
+        Input 1: <input type="text" id="input1">
+        <br>
+        <br>
+        Input 2: <input type="text" id="input1">
+        <br>
+        <br>
+        <!-- En el caso de los input de tipo "checkbox" no se aprecia el cambio
+        de foco. -->
+        <label>Input 3:</label><br/>
+        <input type="checkbox" id="op1" name="input3" value="opcion1">
+        <label for="op1">opcion 1</label><br/>
+        <input type="checkbox" id="op2" name="input3" value="opcion2">
+        <label for="op2">opcion 2</label><br/>
+        <br>
+        <br>
+        Input 4: <select id="input4">
+            <option value="opcion1">opcion 1</option>
+            <option value="opcion2">opcion 2</option>
+            <option value="opcion3">opcion 3</option>
+        </select>
+    </form>
+    <script>
+        /** Si el caso de uso lo requiere, se puede simplificar la aplicación de eventos
+         * a los elementos de un formulario.
+         * En este caso, se deberá pasar al método "addEventListener" un tercer parámetro
+         * con valor "true", para que aplique el evento a todos sus elementos de los distintos
+         * tipos.
+         * Esto se conoce como delegación de evento o "useCapture".
+         */
+
+        const forma = document.getElementById('formulario');
+
+        forma.addEventListener('focus', focoSi, true);
+        forma.addEventListener('blur', focoNo, true);
+
+        function focoSi(evento) {
+            evento.target.style.background = 'lightgrey';
+        }
+        function focoNo(evento) {
+            evento.target.style.background = 'white';
+        }
+    </script>
+</body>
+</html>

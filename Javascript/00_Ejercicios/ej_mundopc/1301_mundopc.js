@@ -73,7 +73,7 @@ class Computadora {
     set setTeclado(Teclado) { this._teclado = Teclado; }
     set setRaton(Raton) { this._raton = Raton; }
     toString() {
-        return '{Computadora -> id:' + this._idComputadora + '\n' + this._monitor.toString() + '\n' + this._teclado.toString() + '\n' + this._raton.toString() + ' }';
+        return `[Computadora -> id:${this._idComputadora}\n${this._monitor}\n${this._teclado}\n${this._raton}]`;
     }
 }
 

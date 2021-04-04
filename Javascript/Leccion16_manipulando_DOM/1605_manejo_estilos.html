@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo estilos desde JS</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo estilos de elementos</h1>
+    <p id="colorMostrado"></p>
+    <script>
+        /** Mediante el atributo "style", se puede acceder a las propiedades
+         * de estilo de un elemento.
+        */
+        function cambiar() {
+            let rojo = Math.round(Math.random()*255);
+            let verde = Math.round(Math.random()*255);
+            let azul = Math.round(Math.random()*255);
+            document.getElementById('titulo').style.color = `rgb(${rojo},${verde},${azul})`;
+            document.getElementById('colorMostrado').innerHTML = `rgb(${rojo},${verde},${azul})`;
+        }
+    </script>
+    <br>
+    <br>
+    <button onclick="cambiar()">Cambiar estilo</button>
+</body>
+</html>

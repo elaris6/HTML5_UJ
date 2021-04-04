@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onload</title>
+</head>
+<!-- El evento "onload" se produce cuando se inicia la carga del documento HTML. -->
+<body onload="entrar()">
+    <h1>Evento onload</h1>
+    <p>Gestión del evento onload</p>
+</br>
+    <div id="salida"></div>
+    <script>
+        function entrar() {
+            alert("Entrando a la página web");
+            let texto = '';
+            /** Ejemplo de varias comprobaciones realizadas en la carga de la página.
+             * El objeto "navigator" ya está creado por defecto y sirve para realizar
+             * interacciones con el navegador.
+             * Por ejemplo, consultar si las cookies están habilitadas.
+            */
+            if(navigator.cookieEnabled){
+                texto += 'Cookies habilitadas.\n';
+            }
+            else {
+                texto += 'Cookies NO habilitadas.\n';
+            }
+            document.getElementById('salida').innerHTML = texto;
+        }
+    </script>
+</body>
+</html>

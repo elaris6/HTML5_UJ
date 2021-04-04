@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM con Javascript</title>
+    <style>
+        .azul {
+            color: blue;
+        }
+        .violeta {
+            color: rgb(197, 0, 197);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="cabecera" class="azul">Ejemplo DOM con Javascript</h1>
+    <p id="parrafo1" class="azul">Saludos!</p>
+    <p id="parrafo2" class="azul">Texto del segundo párrafo</p>
+    <script>
+        /** Si un script está dentro del DOM, para poder acceder
+         * a los elementos HTML, debe estar después de los elementos
+         * que se vayan a necesitar.
+        */
+        
+        // Accediendo al contenido de un elemento
+        let cabecera = document.getElementById("cabecera");
+        let parrafo1 = document.getElementById("parrafo1");
+        console.log('Texto de cabecera: ' + cabecera.innerHTML); // como cadenas normales
+        console.log(`Texto inicial del párrafo: ${parrafo1.innerHTML}`); // como template literal
+
+        // Modificando el contenido de un elemento
+        parrafo1.innerHTML = 'Texto modificado desde script!';
+
+        // Accediendo a todos los elementos de un mismo tipo de etiqueta
+        let elemTag = document.getElementsByTagName('p');
+        console.log(`Elementos recuperados por etiqueta: ${elemTag.length}`);
+        // Recorremos el Array de elementos
+        for( let elem of elemTag ){
+            console.log(`${elem.id}`);
+        }
+
+        // Accediendo a todos los elementos que tienen una clase
+        let elemClase = document.getElementsByClassName('azul');
+        console.log(`Elementos recuperados por clase: ${elemClase.length}`);
+        // Modificando la clase de un elemento H1.
+        for( let elem of elemClase ){
+            if( elem.tagName == ('H1')){
+                console.log(`Encontrado H1 con id: ${elem.id}`);
+                elem.setAttribute('class','violeta');
+            }
+        }
+
+        // Accediendo a elementos con un selector como CSS3
+        let elemQuery = document.querySelectorAll('p.azul');
+        console.log(`Elementos recuperados con querySelectorAll: ${elemQuery.length}`);
+        //Modificando el contenido de los elementos
+        for(let elem of elemQuery){
+            elem.innerHTML = `<i>${elem.innerHTML}</i>`;
+        }
+
+    </script>
+</body>
+</html>

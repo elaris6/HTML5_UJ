@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+<body>
+    <!-- Se puede asociar código Javascript directamente sobre eventos
+    en elementos del DOM. En este caso, el objeto "this" representa el
+    propio elemento sobre el que se detecta el evento.
+    Se podrían incluir varias líneas de código separadas por punto y coma, deberá
+    pero esta forma de insertar código Javascript no es una buena práctica. -->
+    <h2 onclick="this.innerHTML='Texto modificado con JS inline';console.log(this);">Eventos en el DOM. Hazme click</h2>
+    <!-- Lo apropiado es usar métodos. -->
+    <h2 onclick="cambiarTexto(this)">Eventos en el DOM. Hazme click</h2>
+    <!-- La mejor práctica es hacerlo todo desde Javascript. -->
+    <h2 id="titulo">Eventos en el DOM. Hazme click</h2>
+    <script>
+        /** Método llamado desde el elemento del DOM. */
+        function cambiarTexto(elem){
+            console.log(elem);
+            elem.innerHTML='Texto modificado desde método 1';
+        }
+
+        /** Evento detectado directamente en Javascript. */
+        function cambiarTexto2(){
+            elem = document.getElementById('titulo')
+            console.log(elem);
+            elem.innerHTML='Texto modificado desde método 2';
+        }
+        document.getElementById('titulo').onclick=cambiarTexto2;
+    </script>
+    <br>
+    <br>
+    <button>Cambiar estilo</button>
+</body>
+</html>

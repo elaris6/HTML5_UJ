@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión eventos con addEventListener</title>
+</head>
+<body>
+    <!-- Eventos "onfocus" (elemento gana el foco) y "onblur" (elemento pierde el foco).
+    En este caso los eventos se generarán desde Javascript. -->
+    <h1 id="titulo">Gestión eventos con addEventListener</h1>
+    <p>El fondo de los input se modifica al ganar o perder el foco.</p>
+    <br>
+    Input 1: <input type="text" id="input1">
+    <br>
+    <br>
+    Input 2: <input type="text" id="input2">
+    <br>
+    <br>
+    Input 3: <input type="text" id="input3">
+    <script>
+        /** Se puede añadir eventos sobre elementos con el método "addEventListener".
+         * Al informar los eventos, el identificador de los mismos pierde el prefijo "on",
+         * y se pasa como un string. Adicionalmente se indican son las funciones callback
+         * a emplear cuando se dispare el evento.
+         */
+        /** De esta forma el código Javascript crece un poco, pero supone una buena
+         * práctica de cara al mantenimiento posterior ya que se debe evitar siempre
+         * incluir código directamente en el documento HTML.
+         */
+        document.getElementById('input1').addEventListener('focus', focoSi);
+        document.getElementById('input1').addEventListener('blur', focoNo);
+        document.getElementById('input2').addEventListener('focus', focoSi);
+        document.getElementById('input2').addEventListener('blur', focoNo);
+
+        /** Se pueden indicar directamente funciones de tipo flecha, pero solo
+         * convendrá utilizarlo si no es una funcionaliad a reutilizar.
+         */
+        document.getElementById('input3').addEventListener('focus', (evento) => evento.target.style.background = 'yellow');
+        document.getElementById('input3').addEventListener('blur', (evento) => evento.target.style.background = '');
+
+        function focoSi(evento) {
+            evento.target.style.background = 'lightgrey';
+        }
+        function focoNo(evento) {
+            evento.target.style.background = 'white';
+        }
+    </script>
+</body>
+</html>

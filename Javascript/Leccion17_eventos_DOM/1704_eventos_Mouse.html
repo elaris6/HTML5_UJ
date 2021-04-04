@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Mouse</title>
+</head>
+<body>
+    <!-- Asociamos eventos "onmouseover" (ratón sobre) y "onmouseout" (ratón fuera)
+    a un elemento de tipo H1. -->
+    <h1 id="titulo" onmouseover="cambiaColores(this);" onmouseout="negro(this);">Eventos onmouseout y onmouseover</h1>
+    <p id="color"></p>
+    <br>
+    <br>
+    <!-- Asociamos eventos "onmousedown" (hacer click) y "onmouseup" (soltar click)
+    a un elemento de tipo H1.
+    Los eventos "onmousedown" y "onmouseup" se ejecutan antes del evento "onclick". -->
+    <h1 id="titulo" onmousedown="rojo(this);" onmouseup="verde(this);" onclick="azul(this);">Eventos onmousedown, onmouseup y onclick</h1>
+    <script>
+        function colorR() {
+            let rojo = Math.round(Math.random()*255);
+            let verde = Math.round(Math.random()*255);
+            let azul = Math.round(Math.random()*255);
+            return [rojo, verde, azul];
+        }
+        function cambiaColores(elem){
+            let color = colorR();
+            console.log(`rgb(${color[0]},${color[1]},${color[2]})`);
+            elem.style.color = `rgb(${color[0]},${color[1]},${color[2]})`;
+            document.getElementById('color').innerHTML = `rgb(${color[0]},${color[1]},${color[2]})`;
+        }
+
+        function negro(elem){
+            elem.style.color = 'black';
+        }
+        function rojo(elem){
+            console.log("onmousedown --> rojo");
+            elem.style.color = 'red';
+        }
+
+        function verde(elem){
+            console.log("onmouseup  --> verde");
+            elem.style.color = 'green';
+        }
+        function azul(elem){
+            console.log("onclick --> azul");
+            elem.style.color = 'blue';
+        }
+    </script>
+</body>
+</html>

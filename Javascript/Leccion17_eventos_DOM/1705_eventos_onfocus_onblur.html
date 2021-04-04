@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos onfocus y onblur</title>
+</head>
+<body>
+    <!-- Eventos "onfocus" (elemento gana el foco) y
+    "onblur" (elemento pierde el foco). -->
+    <h1 id="titulo">Eventos onfocus y onblur</h1>
+    <p>El fondo de los input se modifica al ganar o perder el foco.</p>
+    <br>
+    Input 1: <input type="text" onfocus="focoSi(this)" onblur="focoNo(this)">
+    <br>
+    <br>
+    Input 2: <input type="text" onfocus="focoSi(this)" onblur="focoNo(this)">
+    <br>
+    <br>
+    Input 3: <input type="text" onfocus="focoSi(this)" onblur="focoNo(this)">
+    <script>
+        function focoSi(elemento) {
+            elemento.style.background = 'lightgrey';
+        }
+        function focoNo(elemento) {
+            elemento.style.background = 'white';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo formularios</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form action="" id="form1">
+        Nombre:<input type ="text" size="30" name="nombre" value="">
+        </br>
+        Apellido:<input type ="text" size="30" name="apellido" value="">
+        </br>
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="salida"></div>
+    <script type="text/javascript">
+        function mostrarValores(){
+            /** document.forms['id_form'] recupera los elementos de un formulario. */
+            let formulario = document.forms['form1'];
+            let texto = '</br>';
+            for (let elem of formulario){
+                texto += elem.value + '</br>';
+            }
+            document.getElementById('salida').innerHTML = texto;
+
+            /** Accediendo al objeto concreto del formulario.
+             * Esto recupera el elemento, no el "value". */
+            let elemento = formulario['nombre'];
+            console.log(elemento.value);
+        }
+    </script>
+</body>
+</html>
