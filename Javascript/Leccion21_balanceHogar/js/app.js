@@ -12,6 +12,9 @@ const listaGastos = [
     new Gasto('Colegios', 115.25)
 ];
 
+/**const listaIngresos = [];
+const listaGastos = [];*/
+
 /** Función principal que se llama en el body. */
 let cargarApp = () => {
     cargarCabecero();
@@ -145,10 +148,44 @@ const agregarDato = () => {
     let desc = formulario['descripcion'].value;
     let importe = parseFloat(formulario['importe'].value);
     /**Incluir control de datos antes de insertar */
-    if (tipo == "ingreso") {
-        listaIngresos.push(new Ingreso(desc, importe));
-    } else {
-        listaGastos.push(new Gasto(desc, importe));
+    if (desc.length < 4) {
+        agregarAlerta('Descripción incorrecta');
+        formulario['descripcion'].focus();
     }
-    cargarApp();
+    else if (isNaN(importe)) {
+        agregarAlerta('Importe incorrecto');
+        formulario['importe'].focus();
+    }
+    else {
+        if (tipo == "ingreso") {
+            /** Sintaxis simplificada para convertir un valor a number
+             * agregando "+" delante de la variable.
+             */
+            listaIngresos.push(new Ingreso(desc, +importe));
+        } else if ((tipo == "gasto")){
+            listaGastos.push(new Gasto(desc, +importe));
+        } else {
+            agregarAlerta('Tipo de registro incorrecto');
+            return;
+        }
+        borrarAlerta();
+        cargarApp();
+    }
+}
+
+/** Función para mostrar una alerta en  */
+const agregarAlerta = (mensaje) => {
+    let alerta = `
+        <div class="agregar">
+            <div class="agregar_contenedor">
+                <div class="alert"> 
+                    ${mensaje}<span class="closebtn" onclick="borrarAlerta();">&times;</span>
+                </div>
+            </div>
+        </div>`;
+    document.getElementById('alerta').innerHTML = alerta;
+}
+
+const borrarAlerta = () => {
+    document.getElementById('alerta').innerHTML = '';
 }

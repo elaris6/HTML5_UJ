@@ -33,7 +33,7 @@ function validarForm(formulario){
         }
     }
 
-    // Valida campo email
+    // Validación báscia campo email
     var email = formulario.email;
     if (email.value == "" || email.value.length < 6) {
         errorCampo(email,"Campo 'Email' vacío o logintud insuficiente.");
